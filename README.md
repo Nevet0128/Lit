@@ -1,1 +1,1 @@
-\*\*\*Repositorio para guardar avances
+Repositorio para guardar avances
