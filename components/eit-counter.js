@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit'
 import { WiredCard } from 'wired-elements/lib/wired-card.js'
 import { WiredButton } from 'wired-elements/lib/wired-button.js'
+import googleNews from '../GoogleNewsAPI.js'
 
 export class EitCounter extends LitElement {
   static properties = {
@@ -42,9 +43,13 @@ export class EitCounter extends LitElement {
 
         <div>${this.counter}</div>
 
-        <input type="range" value="0" @change="${this._sliderValue}" id="valueRange" min="0" max="10">
+        <input type="range" value="0" @change="${
+          this._sliderValue
+        }" id="valueRange" min="0" max="10">
         </br>
-        
+
+        ${googleNews()}
+
         <wired-button @click=${this._decrementar}>Decrementar</wired-button>
 
         <wired-button @click=${this._incrementar}>Incrementar</wired-button>
